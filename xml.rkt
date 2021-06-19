@@ -1,7 +1,7 @@
 #lang racket
 (require xml)
 
-;;; pnkp/xml - tools for working with XML files ================================
+;;; libquiche/xml - tools for working with XML files ================================
 
 (provide (contract-out
           ;; Removes " " elements from lists

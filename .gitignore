@@ -7,8 +7,14 @@
 \#*.rkt#
 \#*.rkt#*#
 
+*.scrbl~
+*.scrbl.bak
+\#*.scrbl#
+\#*.scrbl#*#
+
 # Compiled racket bytecode
 compiled/
+doc/
 *.zo
 
 # Dependency tracking files

@@ -1,14 +1,25 @@
-# libquiche - Miscellaneous Racket libraries
+#lang scribble/manual
+@require[@for-label[libquiche
+                    racket/base]]
 
-Random Racket libraries that should be useful to more than one project
+@title{libquiche}
+@author{parnikkapore}
 
-## xml - tools for working with XML files
+@defmodule[libquiche]
 
-```racket
+Package Description Here
+ 
+Welcome to my documentation: @racket[(list 'testing 1 2 3)].
+
+@defmodule[libquiche/xml]
+
+Tools for working with XML files
+
+@racketblock[
 (provide (contract-out
           ;; Removes " " elements from lists
           ;; (Good for cleaning up xexprs generated from pretty-printed xmls)
           [x-remove-whitespace (-> xexpr? xexpr?)]
           ;; Gets actual text content from a cdata, removing the "<![CDATA[…]]>" delimiter
           [x-cdata-content (-> cdata? string?)]))
-```
+]
