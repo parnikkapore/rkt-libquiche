@@ -1,6 +1,7 @@
 #lang scribble/manual
 @require[@for-label[libquiche
-                    racket/base]]
+                    racket
+                    xml]]
 
 @title{Libquiche - Miscellaneous Racket libraries}
 @author{parnikkapore}
@@ -10,8 +11,7 @@
 This collection holds functions and other stuff that I wrote to complement the Racket
 standard library, but is insignificant enough to warrant its own package.
 
-@racket{(require libquiche)} requires every part of this library - the equivalent to
-@c{#include <bits/stdc++.h>}.
+@racket[(require libquiche)] requires every part of this library.
 
 @defmodule[libquiche/xml]
 
@@ -32,7 +32,7 @@ Tools for working with XML files
 
 Tools for working with hashmaps
 
-@defproc[ (hash-path (hash hashmap?) (keys (list/c any?)))
-          hashmap?]{
- Access child elements of a hash map by a list of keys, which forms a path
+@defproc[ (hash-path (hash hash?) (keys list?))
+          any/c]{
+ Access child elements of a hash table by a list of keys, which forms a path
 }
