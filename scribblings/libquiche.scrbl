@@ -1,21 +1,27 @@
 #lang scribble/manual
 @require[@for-label[libquiche
-                    racket
-                    xml]]
+                    racket/base
+                    xml/xexpr]]
 
 @title{Libquiche - Miscellaneous Racket libraries}
 @author{parnikkapore}
 
 @defmodule[libquiche]
 
-This collection holds functions and other stuff that I wrote to complement the Racket
-standard library, but is insignificant enough to warrant its own package.
+This collection holds functions and other stuff I wrote to complement the Racket
+standard library which aren't significant enough to warrant its own package.
+Just like a quiche, it's a mixture of multiple delicious things, all in a
+unified enclosure of crunchy crust and mellow cheese.
 
 @racket[(require libquiche)] requires every part of this library.
 
+@table-of-contents[]
+
+@section{XML helpers: @tt{xml}}
+
 @defmodule[libquiche/xml]
 
-Tools for working with XML files
+Functions for working with XML data
 
 @defproc[ (x-remove-whitespace (list xexpr?))
           xexpr?]{
@@ -28,9 +34,11 @@ Tools for working with XML files
  Gets actual text content from a cdata, removing the "<![CDATA[...]]>" delimiter
 }
 
+@section{Hashmap helpers: @tt{hash}}
+
 @defmodule[libquiche/hash]
 
-Tools for working with hashmaps
+Functions for working with hashmaps
 
 @defproc[ (hash-path (hash hash?) (keys list?))
           any/c]{
